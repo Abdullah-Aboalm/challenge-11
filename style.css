@@ -1,0 +1,145 @@
+/* start global rules */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+/* end global rules */
+
+.container {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto-fill);
+    box-shadow: 0px 10px 20px 9px #0000001c;
+    border-radius: 10px;
+}
+
+.head {
+    background-color: white;
+    grid-column: span 2;
+    padding: 30px 50px 50px 40px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.head h1 {
+    color: #2a9696;
+    margin-bottom: 35px;
+}
+
+.head h4 {
+    font-size: 18px;
+    color: #bacd5a;
+    margin-bottom: 20px;
+}
+
+.head p {
+    color: #bcbfc8;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.sub {
+    background-color: #2bb3b1;
+    padding: 40px 50px 50px 40px;
+    border-bottom-left-radius: 10px;
+}
+
+.sub h3 {
+    color: white;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+
+.sub p:first-of-type {
+    color: #e2f7f799;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.sub span {
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.sub p:last-of-type {
+    color: white;
+}
+
+.sub button {
+    background-color: #bfdf32;
+    border: none;
+    padding: 20px;
+    width: 100%;
+    margin-top: 25px;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 1px 6px 20px 5px #00000033;
+    cursor: pointer;
+}
+
+.why-us {
+    background-color: #4abebd;
+    padding: 40px 50px 50px 40px;
+    border-bottom-right-radius: 10px;
+}
+
+.why-us h3 {
+    color: white;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+
+.why-us p {
+    color: #ffffff9c;
+    margin-top: 25px;
+    line-height: 1.4;
+    font-size: 17px;
+}
+
+@media (max-width: 767px) {
+
+    .container {
+        width: 320px;
+        grid-template-columns: 300px;
+        grid-template-rows: 500px, repeat(2 , 300px);
+        margin-bottom: 50px;
+        margin-left:  10px !important;
+        margin-right: 10px !important;
+        margin-top: 50px;
+    }
+    
+    .head {
+        grid-column: span 2 !important;
+    }
+    
+    .sub {
+        grid-column: span 2 !important;
+        border-bottom-left-radius: 0;
+    }
+    
+    .why-us {
+        border-bottom-left-radius: 10px;
+        grid-column: span 2;
+    }
+}
